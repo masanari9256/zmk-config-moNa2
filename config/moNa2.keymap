@@ -15,7 +15,7 @@
 &lt {
     flavor = "balanced";
     quick-tap-ms = <0>;
-    tapping-term-ms = <50>;
+    tapping-term-ms = <200>;
 };
 
 / {
@@ -175,15 +175,6 @@
 
             #binding-cells = <2>;
             tapping-term-ms = <50>;
-        };
-
-        lt: layer_tap {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            flavor = "tap-preferred";
-            tapping-term-ms = <50>;
-            bindings = <&mo>, <&kp>;
-            display-name = "Layer-Tap";
         };
 
         scroll_up_down: mouse_wheel_up_down {

@@ -12,8 +12,6 @@
     tapping-term-ms = <200>;
 };
 
-&lt { tapping-term-ms = <50>; };
-
 / {
     combos { compatible = "zmk,combos"; };
 
@@ -173,6 +171,15 @@
             tapping-term-ms = <50>;
         };
 
+        lt: layer_tap {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <100>;
+            bindings = <&mo>, <&kp>;
+            display-name = "Layer-Tap";
+        };
+
         scroll_up_down: mouse_wheel_up_down {
             compatible = "zmk,behavior-sensor-rotate";
             #sensor-binding-cells = <0>;
@@ -190,7 +197,7 @@
 &kp Q         &kp W         &kp E    &kp R          &kp T                                                           &kp Y             &kp U  &kp I  &kp O      &kp P
 &kp A         &kp S         &kp D    &kp F          &kp G                      &trans                    &trans     &kp H             &kp J  &kp K  &kp L      &kp MINUS
 &kp LCTRL     &kp Z         &kp X    &kp C          &kp V                      &trans                    &trans     &kp B             &kp N  &kp M  &kp COMMA  &kp PERIOD
-&kp LEFT_WIN  &kp LEFT_ALT  &kp TAB  &kp BACKSPACE  &mt LEFT_SHIFT LANGUAGE_2  &lt_to_layer_0 5 SPACE    &kp ENTER  &lt 1 LANGUAGE_1                           &kp ESC
+&kp LEFT_WIN  &kp LEFT_ALT  &kp TAB  &kp BACKSPACE  &mt LEFT_SHIFT LANGUAGE_2  &lt  5 SPACE    &kp ENTER  &lt 1 LANGUAGE_1                           &kp ESC
             >;
 
             sensor-bindings =

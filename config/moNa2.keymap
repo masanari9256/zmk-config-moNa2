@@ -175,7 +175,7 @@
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "tap-preferred";
-            tapping-term-ms = <100>;
+            tapping-term-ms = <50>;
             bindings = <&mo>, <&kp>;
             display-name = "Layer-Tap";
         };
@@ -204,7 +204,6 @@
                 <&scroll_up_down>,
                 <&inc_dec_kp C_VOL_DN C_VOL_UP>;
         };
-
         layer_1 {
             bindings = <
 &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS                    &kp LESS_THAN    &kp GREATER_THAN  &kp SINGLE_QUOTE  &kp EQUAL        &kp MINUS

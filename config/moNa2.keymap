@@ -16,7 +16,7 @@
     flavor = "balanced";
     quick-tap-ms = <0>;
     tapping-term-ms = <200>;
-}
+};
 
 / {
     combos { compatible = "zmk,combos"; };

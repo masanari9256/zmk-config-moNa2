@@ -32,9 +32,9 @@
     };
 
     disable-scroll-x {
-            layers = <2>; //スクロールレイヤー
-            input-processors = <&wheel_x_scaler 0 1>;
-        };
+        layers = <2>; //スクロールレイヤー
+        input-processors = <&wheel_x_scaler 0 1>;
+    };
 };
 
 &pinctrl {

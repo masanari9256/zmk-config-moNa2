@@ -29,11 +29,11 @@
     trackball_listener {
         compatible = "zmk,input-listener";
         device = <&trackball>;
-    };
 
-    disable-scroll-x {
-        layers = <2>; //スクロールレイヤー
-        input-processors = <&wheel_x_scaler 0 1>;
+        disable-scroll-x {
+            layers = <2>; //スクロールレイヤー
+            input-processors = <&wheel_x_scaler 0 1>;
+        };
     };
 };
 

@@ -42,11 +42,6 @@
             layers = <2>; //スクロールレイヤー
             input-processors = <&wheel_x_scaler 0 1>;
         };
-
-        scroll-y {
-            layers = <2>; // スクロールレイヤー
-            input-processors = <&wheel_y_scaler 0 1>;  // 縦方向のスクロール速度を変更
-        };
     };
 };
 

@@ -191,10 +191,10 @@
 
         default_layer {
             bindings = <
-&kp Q         &kp W         &kp E    &kp R          &kp T                                                      &kp Y                        &kp U  &kp I  &kp O      &kp P
-&kp A         &kp S         &kp D    &kp F          &kp G                            &trans         &trans     &kp H                        &kp J  &kp K  &kp L      &kp MINUS
-&kp LCTRL     &kp Z         &kp X    &kp C          &kp V                            &trans         &trans     &kp B                        &kp N  &kp M  &kp COMMA  &kp PERIOD
-&kp LEFT_WIN  &kp LEFT_ALT  &kp TAB  &kp BACKSPACE  &lt_to_layer_0 0 LC(LANGUAGE_2)  &lt 2 SPACE    &kp ENTER  &lt_to_layer_0 3 LANGUAGE_1                           &kp ESC
+&kp Q         &kp W         &kp E    &kp R          &kp T                                                  &kp Y                        &kp U  &kp I  &kp O      &kp P
+&kp A         &kp S         &kp D    &kp F          &kp G                        &trans         &trans     &kp H                        &kp J  &kp K  &kp L      &kp MINUS
+&kp LCTRL     &kp Z         &kp X    &kp C          &kp V                        &trans         &trans     &kp B                        &kp N  &kp M  &kp COMMA  &kp PERIOD
+&kp LEFT_WIN  &kp LEFT_ALT  &kp TAB  &kp BACKSPACE  &lt_to_layer_0 0 LANGUAGE_2  &lt 2 SPACE    &kp ENTER  &lt_to_layer_0 3 LANGUAGE_1                           &kp ESC
             >;
 
             sensor-bindings =
@@ -207,7 +207,7 @@
 &trans  &trans  &trans  &trans  &trans                    &m_screen_capture  &m_screen_switch_left  &m_screen_switch  &m_screen_switch_right  &m_screen_shot
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &mkp MB5           &mkp MB1               &kp PAGE_UP       &mkp MB2                &m_copy
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &mkp MB4           &mkp MB3               &kp PAGE_DOWN     &m_copy_to_search       &m_paste
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans                                                                              &trans
+&trans  &trans  &trans  &trans  &mo 0   &trans    &trans  &mo 0                                                                               &trans
             >;
 
             sensor-bindings = <&scroll_up_down>;

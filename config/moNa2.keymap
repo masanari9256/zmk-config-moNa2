@@ -207,7 +207,7 @@
 &trans  &trans  &trans  &trans  &trans                    &m_screen_capture  &m_screen_switch_left  &m_screen_switch  &m_screen_switch_right  &m_screen_shot
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &mkp MB5           &mkp MB1               &kp PAGE_UP       &mkp MB2                &m_copy
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &mkp MB4           &mkp MB3               &kp PAGE_DOWN     &m_copy_to_search       &m_paste
-&trans  &trans  &trans  &trans  &trans  &mo 2     &trans  &trans                                                                              &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans                                                                              &trans
             >;
 
             sensor-bindings = <&scroll_up_down>;

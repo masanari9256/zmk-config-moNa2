@@ -40,12 +40,12 @@
 
         disable-scroll-x {
             layers = <2>; //スクロールレイヤー
-            input-processors = <&wheel_x_scaler 0 1>;
+            input-processors = <&wheel_x_scaler 0 0.25>;
         };
 
         scroll-y {
             layers = <2>; // スクロールレイヤー
-            input-processors = <&wheel_y_scaler 0 10>;  // 縦方向のスクロール速度を変更
+            input-processors = <&wheel_y_scaler 0 100>;  // 縦方向のスクロール速度を変更
         };
     };
 };

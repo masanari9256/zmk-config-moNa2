@@ -48,7 +48,6 @@
             input-processors = <&wheel_x_scaler 0 1>; // スクロールレイヤーのx軸の入力を0倍することで無効にする
         };
 
-
     };
 
     mouse-layer {

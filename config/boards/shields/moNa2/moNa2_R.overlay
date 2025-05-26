@@ -36,6 +36,7 @@
         mouse_stay_layer: mouse_stay_layer {
             compatible = "zmk,input-processor-temp-layer";
             #input-processor-cells = <2>;
+            require-prior-idle-ms = <2000>;
             excluded-positions = <18 20>;
         };
     };
@@ -48,12 +49,6 @@
             layers = <2>; // スクロールレイヤー
             input-processors = <&wheel_x_scaler 0 1>; // スクロールレイヤーのx軸の入力を0倍することで無効にする
         };
-
-        mouse-layer {
-            layers = <1>; // マウスレイヤーとする
-            input-processors = <&mouse_stay_layer 2 500>; // 500ms（0.5秒）入力がなければ解除
-        };
-
     };
 
 };
@@ -93,6 +88,5 @@
         irq-gpios = <&gpio0 2 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
         automouse-layer = <1>; // レイヤー1をマウスレイヤーとする
         scroll-layers = <2>; // レイヤー2をスクロールレイヤーとする
-
     };
 };

@@ -47,11 +47,6 @@
             layers = <2>; // スクロールレイヤー
             input-processors = <&wheel_x_scaler 0 1>; // スクロールレイヤーのx軸の入力を0倍することで無効にする
         };
-
-        mouse-layer {
-            layers = <1>; // マウスレイヤーとする
-            input-processors = <&mouse_stay_layer 2 500>; // 500ms（0.5秒）入力がなければ解除
-        };
     };
 
 };
@@ -89,7 +84,7 @@
         reg = <0>;
         spi-max-frequency = <2000000>;
         irq-gpios = <&gpio0 2 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
-
+        automouse-layer = <1>; // レイヤー1をマウスレイヤーとする
         scroll-layers = <2>; // レイヤー2をスクロールレイヤーとする
 
     };

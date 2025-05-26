@@ -36,6 +36,7 @@
         mouse_stay_layer: mouse_stay_layer {
             compatible = "zmk,input-processor-temp-layer";
             #input-processor-cells = <2>;
+            excluded-positions = <18 20>;
         };
     };
 
@@ -47,6 +48,12 @@
             layers = <2>; // スクロールレイヤー
             input-processors = <&wheel_x_scaler 0 1>; // スクロールレイヤーのx軸の入力を0倍することで無効にする
         };
+
+        mouse-layer {
+            layers = <1>; // マウスレイヤーとする
+            input-processors = <&mouse_stay_layer 2 500>; // 500ms（0.5秒）入力がなければ解除
+        };
+
     };
 
 };

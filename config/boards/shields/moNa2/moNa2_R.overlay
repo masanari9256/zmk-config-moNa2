@@ -52,7 +52,6 @@
             layers = <1>; // マウスレイヤーとする
             input-processors = <&mouse_stay_layer 2 500>; // 500ms（0.5秒）入力がなければ解除
         };
-
     };
 
 };

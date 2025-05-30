@@ -9,13 +9,13 @@
 &mt {
     flavor = "balanced";
     quick-tap-ms = <0>;
-    tapping-term-ms = <100>;
+    tapping-term-ms = <200>;
 };
 
 &lt {
     flavor = "balanced";
     quick-tap-ms = <0>;
-    tapping-term-ms = <100>;
+    tapping-term-ms = <200>;
 };
 
 / {
@@ -170,12 +170,11 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
-                <&macro_press>,
-                <&bt BT_SEL 0>,
-                <&macro_press>,
-                <&bt BT_DISC 1>,
-                <&macro_press>,
-                <&bt BT_DISC 2>;
+                <&macro_press &bt BT_SEL 0>,
+                <&macro_wait_time 500>
+                <&macro_press &bt BT_DISC 1>,
+                <&macro_wait_time 500>
+                <&macro_press &bt BT_DISC 2>,
 
             label = "M_CONNECT_0";
         };
@@ -184,12 +183,11 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
-                <&macro_press>,
-                <&bt BT_SEL 1>,
-                <&macro_press>,
-                <&bt BT_DISC 0>,
-                <&macro_press>,
-                <&bt BT_DISC 2>;
+                <&macro_press &bt BT_SEL 1>,
+                <&macro_wait_time 500>
+                <&macro_press &bt BT_DISC 0>,
+                <&macro_wait_time 500>
+                <&macro_press &bt BT_DISC 2>,
 
             label = "M_CONNECT_1";
         };
@@ -198,12 +196,11 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
-                <&macro_press>,
-                <&bt BT_SEL 2>,
-                <&macro_press>,
-                <&bt BT_DISC 0>,
-                <&macro_press>,
-                <&bt BT_DISC 1>;
+                <&macro_press &bt BT_SEL 2>,
+                <&macro_wait_time 500>
+                <&macro_press &bt BT_DISC 0>,
+                <&macro_wait_time 500>
+                <&macro_press &bt BT_DISC 1>,
 
             label = "M_CONNECT_2";
         };

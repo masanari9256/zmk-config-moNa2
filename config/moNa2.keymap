@@ -165,6 +165,48 @@
 
             label = "EMOJI";
         };
+
+        m_connect_1: m_connect_1 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&bt BT_SEL 1>,
+                <&macro_press>,
+                <&bt BT_DISC 2>,
+                <&macro_press>,
+                <&bt BT_DISC 3>;
+
+            label = "M_CONNECT_1";
+        };
+
+        m_connect_2: m_connect_2 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&bt BT_SEL 2>,
+                <&macro_press>,
+                <&bt BT_DISC 1>,
+                <&macro_press>,
+                <&bt BT_DISC 3>;
+
+            label = "M_CONNECT_2";
+        };
+
+        m_connect_3: m_connect_3 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&bt BT_SEL 3>,
+                <&macro_press>,
+                <&bt BT_DISC 1>,
+                <&macro_press>,
+                <&bt BT_DISC 2>;
+
+            label = "M_CONNECT_3";
+        };
     };
 
     behaviors {
@@ -215,10 +257,10 @@
 
         SCROLL {
             bindings = <
-&trans          &trans             &trans           &trans  &trans                    &bt BT_SEL 0  &trans  &trans  &trans  &bt BT_CLR
-&kp K_MUTE      &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &trans  &trans  &trans    &trans  &bt BT_SEL 1  &trans  &trans  &trans  &trans
-&kp LEFT_SHIFT  &trans             &trans           &trans  &trans  &trans    &trans  &bt BT_SEL 2  &trans  &trans  &trans  &trans
-&trans          &trans             &trans           &trans  &trans  &trans    &trans  &trans                                &trans
+&trans          &trans             &trans           &trans  &trans                    &bt BT_SEL 0  &bt BT_DISC 0  &m_connect_1  &trans  &bt BT_CLR
+&kp K_MUTE      &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &trans  &trans  &trans    &trans  &bt BT_SEL 1  &bt BT_DISC 1  &m_connect_2  &trans  &trans
+&kp LEFT_SHIFT  &trans             &trans           &trans  &trans  &trans    &trans  &bt BT_SEL 2  &trans         &trans        &trans  &trans
+&trans          &trans             &trans           &trans  &trans  &trans    &trans  &trans                                             &trans
             >;
 
             sensor-bindings = <&scroll_up_down>;

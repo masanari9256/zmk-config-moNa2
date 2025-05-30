@@ -165,48 +165,6 @@
 
             label = "EMOJI";
         };
-
-        m_connect_0: m_connect_0 {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <
-                &bt BT_SEL 0
-                &macro_wait_time 500
-                &bt BT_DISC 1
-                &macro_wait_time 500
-                &bt BT_DISC 2
-            >;
-
-            label = "M_CONNECT_0";
-        };
-
-        m_connect_1: m_connect_1 {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <
-                &bt BT_SEL 1
-                &macro_wait_time 500
-                &bt BT_DISC 0
-                &macro_wait_time 500
-                &bt BT_DISC 2
-            >;
-
-            label = "M_CONNECT_1";
-        };
-
-        m_connect_2: m_connect_2 {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <
-                &bt BT_SEL 2
-                &macro_wait_time 500
-                &bt BT_DISC 0
-                &macro_wait_time 500
-                &bt BT_DISC 1
-            >;
-
-            label = "M_CONNECT_2";
-        };
     };
 
     behaviors {
@@ -257,10 +215,10 @@
 
         SCROLL {
             bindings = <
-&trans          &trans             &trans           &trans  &trans                    &m_connect_0  &trans  &trans  &trans  &bt BT_CLR
-&kp K_MUTE      &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &trans  &trans  &trans    &trans  &m_connect_1  &trans  &trans  &trans  &trans
-&kp LEFT_SHIFT  &trans             &trans           &trans  &trans  &trans    &trans  &m_connect_2  &trans  &trans  &trans  &trans
-&trans          &trans             &trans           &trans  &trans  &trans    &trans  &trans                                &trans
+&trans          &trans             &trans           &trans  &trans                    &bt BT_SEL 0  &bt BT_DISC 0  &trans  &trans  &bt BT_CLR
+&kp K_MUTE      &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &trans  &trans  &trans    &trans  &bt BT_SEL 1  &bt BT_DISC 1  &trans  &trans  &trans
+&kp LEFT_SHIFT  &trans             &trans           &trans  &trans  &trans    &trans  &bt BT_SEL 2  &bt BT_DISC 2  &trans  &trans  &trans
+&trans          &trans             &trans           &trans  &trans  &trans    &trans  &trans                                       &trans
             >;
 
             sensor-bindings = <&scroll_up_down>;
